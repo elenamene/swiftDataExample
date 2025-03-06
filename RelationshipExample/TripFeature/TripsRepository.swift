@@ -6,7 +6,6 @@ import Foundation
 final class TripsRepository {
     private let context: ModelContext
     
-
     @MainActor
     static let shared = TripsRepository()
 
