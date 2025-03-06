@@ -12,6 +12,12 @@ struct RelationshipExampleApp: App {
                         middlewares: [tripsMiddleware()]
                     )
                 )
+                .task {
+                    #if DEBUG
+                    let url = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
+                    print(url.path(percentEncoded: false))
+                    #endif
+                }
         }
     }
 }
