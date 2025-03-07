@@ -3,7 +3,9 @@ import Foundation
 
 @Model
 public final class Traveller {
+    @Attribute(.unique)
     public var id: UUID
+    
     public var name: String
     
     // This inverse relationship is inferred no need to specify
